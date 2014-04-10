@@ -11,7 +11,7 @@ var PaginateBehavior = function(){
 	this.rows = 10;
 	
 	// ページ周辺の表示ページ
-	this.viewPage = 2
+	this.viewPage = 2;
 	
 	// ページを選択し開始項目番号を特定する
 	this.setCurrentPage = function(page){
@@ -168,6 +168,7 @@ var PaginateBehavior = function(){
 		}
 		
 		return {
+			rows: this.rows,
 			current: cur,
 			min: min,
 			max: max,
@@ -177,7 +178,7 @@ var PaginateBehavior = function(){
 			isNextRange: this.isNextRange(),
 			isPrevRange: this.isPrevRange(),
 			isNext: (cur.page != max.page),
-			isPrev: (cur.page != min.page),
+			isPrev: (cur.page != min.page)
 		};
 	};
 };
