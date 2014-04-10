@@ -1,5 +1,5 @@
 // 最大項目を入力して、現在のページや次のページを表示するか制御するクラス
-var PaginateBehavior = function(){
+PaginationBehavior = function(){
 	
 	// ページ最初の項目番号
 	this.start = 0;
@@ -59,7 +59,7 @@ var PaginateBehavior = function(){
 	
 	// 最大ページを取得
 	this.getMaxPage = function(){
-		return this.getIndexInfo(this.count);
+		return this.getIndexInfo(this.count-1);
 	};
 	
 	// 開始ページを取得
@@ -119,7 +119,7 @@ var PaginateBehavior = function(){
 		
 		// nullを除外
 		var tmp = [];
-		for(var i=0; i < list.length; i++)
+		for(var i=0; i < list.length; i++){
 			if(list[i] != null){
 				tmp.push(list[i]);
 			}
