@@ -168,17 +168,16 @@ var PaginateBehavior = function(){
 		}
 		
 		return {
-			rows: this.rows,
 			current: cur,
 			min: min,
 			max: max,
-			view: this.getPageList(),
+			views: this.getPageList(),
 			next: this.getPageInfo(cur.page + 1),
 			prev: this.getPageInfo(cur.page - 1),
 			isNextRange: this.isNextRange(),
 			isPrevRange: this.isPrevRange(),
 			isNext: (cur.page != max.page),
-			isPrev: (cur.page != min.page)
+			isPrev: (cur.page != min.page),
 		};
 	};
 };
